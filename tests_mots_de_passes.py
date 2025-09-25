@@ -1,7 +1,7 @@
 import pytest
 from mots_passes import verifier_mot_de_passe  # adapter au nom de ton fichier
 
-def test_trop_court(capsys):
+def test_trop_court():
     # Arrange
     mdp = "abc"
     # Act
@@ -9,12 +9,12 @@ def test_trop_court(capsys):
     # Assert
     assert result is False
 
-def test_sans_majuscule(capsys):
+def test_sans_majuscule():
     mdp = "abcdefg1"
     result = verifier_mot_de_passe(mdp)
     assert result is False
 
-def test_sans_chiffre(capsys):
+def test_sans_chiffre():
     mdp = "Abcdefgh"
     result = verifier_mot_de_passe(mdp)
     assert result is False
