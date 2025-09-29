@@ -51,4 +51,5 @@ jours_par_mois = [
 ]
 
 for i in range(12):
-    print(f"Le mois {ls_mois[i]} possède {jours_par_mois[i]} jours.")
+    # 02d afficher sur 2 chiffres (ChatGPT)
+    print(f"Le mois {i+1:02d} {ls_mois[i]} possède {jours_par_mois[i]} jours.")
