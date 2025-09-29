@@ -1,6 +1,6 @@
 # fichier: fizzbuzz.py
 
-def fizzbuzz(n: int) -> str:
+def fizzbuzz(n: int):
     """
     Retourne "Fizz" si divisible par 3,
             "Buzz" si divisible par 5,
@@ -10,11 +10,12 @@ def fizzbuzz(n: int) -> str:
     """
     if n % 15 == 0:
         return "FizzBuzz"
-    if n % 3 == 0:
+    elif n % 3 == 0:
         return "Fizz"
-    if n % 5 == 0:
+    elif n % 5 == 0:
         return "Buzz"
-    return str(n)
+    else:
+        return n
 
 
 if __name__ == "__main__":
