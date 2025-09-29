@@ -33,11 +33,11 @@ if __name__ == "__main__":
 
     ls_retraits = []
     while True:
-        choix = input("Voulez-vous faire un autre retrait? (o/n) ")
+        choix = input("Voulez-vous faire un retrait? (o/n) ")
         if choix == "o":
             while True:
                 try:
-                    retrait_1 = float(input("Retrait 1: Combien voulez-vous retirer? "))
+                    retrait_1 = float(input(f"Retrait {len(ls_retraits)+1}: Combien voulez-vous retirer? "))
                     if retrait_1 <= 0 or retrait_1 > solde:
                         print(f"Entrez un entier positif inférieur ou égal au solde de {solde}.")
                     else:
