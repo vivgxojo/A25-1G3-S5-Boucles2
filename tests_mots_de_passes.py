@@ -7,7 +7,7 @@ def test_trop_court():
     # Act
     result = verifier_mot_de_passe(mdp)
     # Assert
-    assert result is False
+    assert not result
 
 def test_sans_majuscule():
     mdp = "abcdefg1"

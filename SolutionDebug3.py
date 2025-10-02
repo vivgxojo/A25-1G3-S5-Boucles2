@@ -5,6 +5,9 @@ def roche_papier_ciseau(choix_joueur1: str, choix_joueur2: str) -> None:
     """
     armes = ["roche", "papier", "ciseau"]
 
+    choix_joueur1 = choix_joueur1.lower()
+    choix_joueur2 = choix_joueur2.lower()
+
     # Validation
     if choix_joueur1 not in armes or choix_joueur2 not in armes:
         print("Vous n'avez pas entré roche, papier ou ciseau. :(")
@@ -25,8 +28,8 @@ def roche_papier_ciseau(choix_joueur1: str, choix_joueur2: str) -> None:
         joueur_gagnant = "joueur 2"
         arme_gagnante = choix_joueur2
 
-    print(f"\nLe gagnant est {joueur_gagnant} avec {arme_gagnante}, félicitations!")
-
+    #print(f"\nLe gagnant est {joueur_gagnant} avec {arme_gagnante}, félicitations!")
+    return f"{joueur_gagnant} gagne avec {arme_gagnante}"
 
 if __name__ == "__main__":
     print("""
@@ -40,4 +43,5 @@ if __name__ == "__main__":
     choix1 = input("Choix du joueur 1 : ")
     choix2 = input("Choix du joueur 2 : ")
 
-    roche_papier_ciseau(choix1, choix2)
+    resultat = roche_papier_ciseau(choix1, choix2)
+    print(resultat)
